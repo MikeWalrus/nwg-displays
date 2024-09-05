@@ -943,7 +943,7 @@ def create_confirm_win(backup, path):
     confirm_win.show_all()
 
     global counter
-    counter = 10
+    counter = config["confirm-timeout"]
     global src_tag
     src_tag = GLib.timeout_add_seconds(1, count_down, cnt_lbl, backup, path)
 
